@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/tonikrug/Desktop/turtle-interpreter/build",
+  "command": "/usr/bin/clang   -g -std=gnu11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -o CMakeFiles/turtle.dir/src/main.c.o -c /Users/tonikrug/Desktop/turtle-interpreter/src/main.c",
+  "file": "/Users/tonikrug/Desktop/turtle-interpreter/src/main.c",
+  "output": "CMakeFiles/turtle.dir/src/main.c.o"
+}
+]
