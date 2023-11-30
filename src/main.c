@@ -1,7 +1,5 @@
-#include <stdio.h>
+#include "common.h"
 
-int main() {
-
-   printf("Hello, this is Turtle!");
-   return 0;
+  int main(int argc, const char* argv[]) {
+    return 0;
 }
