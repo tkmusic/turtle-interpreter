@@ -1,3 +1,0 @@
-/Users/tonikrug/Desktop/turtle-interpreter/build/CMakeFiles/turtle.dir
-/Users/tonikrug/Desktop/turtle-interpreter/build/CMakeFiles/edit_cache.dir
-/Users/tonikrug/Desktop/turtle-interpreter/build/CMakeFiles/rebuild_cache.dir
