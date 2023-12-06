@@ -4,6 +4,8 @@
 
 The Turtle Interpreter is an open-source project designed to interpret and execute programs written in the Turtle programming language. This documentation provides an overview of the key components and modules of the Turtle Interpreter, along with explanations of their functionality and purpose.
 
+The Core of the Interpreter is made using the incredible book [Crafting Interpreters](https://craftinginterpreters.com) from Robert Nystrom.
+
 ## Project Structure
 
 The Turtle Interpreter project is organized into several files, each serving a specific purpose:
