@@ -7,6 +7,13 @@ set(CMAKE_C_STANDARD 11)
 # Source files
 set(SOURCES
     src/main.c
+    src/chunk.c
+    src/debug.c
+    src/memory.c
+    src/memory.h
+    src/chunk.h
+    src/debug.h
+    src/common.h
     # Add more source files as needed
 )
 

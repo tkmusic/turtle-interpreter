@@ -83,17 +83,65 @@ CMakeFiles/turtle.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/turtle.dir/src/main.c.s"
 	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tonikrug/Desktop/turtle-interpreter/src/main.c -o CMakeFiles/turtle.dir/src/main.c.s
 
+CMakeFiles/turtle.dir/src/chunk.c.o: CMakeFiles/turtle.dir/flags.make
+CMakeFiles/turtle.dir/src/chunk.c.o: /Users/tonikrug/Desktop/turtle-interpreter/src/chunk.c
+CMakeFiles/turtle.dir/src/chunk.c.o: CMakeFiles/turtle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tonikrug/Desktop/turtle-interpreter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/turtle.dir/src/chunk.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/turtle.dir/src/chunk.c.o -MF CMakeFiles/turtle.dir/src/chunk.c.o.d -o CMakeFiles/turtle.dir/src/chunk.c.o -c /Users/tonikrug/Desktop/turtle-interpreter/src/chunk.c
+
+CMakeFiles/turtle.dir/src/chunk.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/turtle.dir/src/chunk.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tonikrug/Desktop/turtle-interpreter/src/chunk.c > CMakeFiles/turtle.dir/src/chunk.c.i
+
+CMakeFiles/turtle.dir/src/chunk.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/turtle.dir/src/chunk.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tonikrug/Desktop/turtle-interpreter/src/chunk.c -o CMakeFiles/turtle.dir/src/chunk.c.s
+
+CMakeFiles/turtle.dir/src/debug.c.o: CMakeFiles/turtle.dir/flags.make
+CMakeFiles/turtle.dir/src/debug.c.o: /Users/tonikrug/Desktop/turtle-interpreter/src/debug.c
+CMakeFiles/turtle.dir/src/debug.c.o: CMakeFiles/turtle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tonikrug/Desktop/turtle-interpreter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/turtle.dir/src/debug.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/turtle.dir/src/debug.c.o -MF CMakeFiles/turtle.dir/src/debug.c.o.d -o CMakeFiles/turtle.dir/src/debug.c.o -c /Users/tonikrug/Desktop/turtle-interpreter/src/debug.c
+
+CMakeFiles/turtle.dir/src/debug.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/turtle.dir/src/debug.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tonikrug/Desktop/turtle-interpreter/src/debug.c > CMakeFiles/turtle.dir/src/debug.c.i
+
+CMakeFiles/turtle.dir/src/debug.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/turtle.dir/src/debug.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tonikrug/Desktop/turtle-interpreter/src/debug.c -o CMakeFiles/turtle.dir/src/debug.c.s
+
+CMakeFiles/turtle.dir/src/memory.c.o: CMakeFiles/turtle.dir/flags.make
+CMakeFiles/turtle.dir/src/memory.c.o: /Users/tonikrug/Desktop/turtle-interpreter/src/memory.c
+CMakeFiles/turtle.dir/src/memory.c.o: CMakeFiles/turtle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/tonikrug/Desktop/turtle-interpreter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/turtle.dir/src/memory.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/turtle.dir/src/memory.c.o -MF CMakeFiles/turtle.dir/src/memory.c.o.d -o CMakeFiles/turtle.dir/src/memory.c.o -c /Users/tonikrug/Desktop/turtle-interpreter/src/memory.c
+
+CMakeFiles/turtle.dir/src/memory.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/turtle.dir/src/memory.c.i"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tonikrug/Desktop/turtle-interpreter/src/memory.c > CMakeFiles/turtle.dir/src/memory.c.i
+
+CMakeFiles/turtle.dir/src/memory.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/turtle.dir/src/memory.c.s"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tonikrug/Desktop/turtle-interpreter/src/memory.c -o CMakeFiles/turtle.dir/src/memory.c.s
+
 # Object files for target turtle
 turtle_OBJECTS = \
-"CMakeFiles/turtle.dir/src/main.c.o"
+"CMakeFiles/turtle.dir/src/main.c.o" \
+"CMakeFiles/turtle.dir/src/chunk.c.o" \
+"CMakeFiles/turtle.dir/src/debug.c.o" \
+"CMakeFiles/turtle.dir/src/memory.c.o"
 
 # External object files for target turtle
 turtle_EXTERNAL_OBJECTS =
 
 turtle: CMakeFiles/turtle.dir/src/main.c.o
+turtle: CMakeFiles/turtle.dir/src/chunk.c.o
+turtle: CMakeFiles/turtle.dir/src/debug.c.o
+turtle: CMakeFiles/turtle.dir/src/memory.c.o
 turtle: CMakeFiles/turtle.dir/build.make
 turtle: CMakeFiles/turtle.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tonikrug/Desktop/turtle-interpreter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable turtle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/tonikrug/Desktop/turtle-interpreter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable turtle"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/turtle.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -129,6 +129,54 @@ turtle/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/build
 .PHONY : turtle/fast
 
+src/chunk.o: src/chunk.c.o
+.PHONY : src/chunk.o
+
+# target to build an object file
+src/chunk.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/chunk.c.o
+.PHONY : src/chunk.c.o
+
+src/chunk.i: src/chunk.c.i
+.PHONY : src/chunk.i
+
+# target to preprocess a source file
+src/chunk.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/chunk.c.i
+.PHONY : src/chunk.c.i
+
+src/chunk.s: src/chunk.c.s
+.PHONY : src/chunk.s
+
+# target to generate assembly for a file
+src/chunk.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/chunk.c.s
+.PHONY : src/chunk.c.s
+
+src/debug.o: src/debug.c.o
+.PHONY : src/debug.o
+
+# target to build an object file
+src/debug.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/debug.c.o
+.PHONY : src/debug.c.o
+
+src/debug.i: src/debug.c.i
+.PHONY : src/debug.i
+
+# target to preprocess a source file
+src/debug.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/debug.c.i
+.PHONY : src/debug.c.i
+
+src/debug.s: src/debug.c.s
+.PHONY : src/debug.s
+
+# target to generate assembly for a file
+src/debug.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/debug.c.s
+.PHONY : src/debug.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -153,6 +201,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/memory.o: src/memory.c.o
+.PHONY : src/memory.o
+
+# target to build an object file
+src/memory.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/memory.c.o
+.PHONY : src/memory.c.o
+
+src/memory.i: src/memory.c.i
+.PHONY : src/memory.i
+
+# target to preprocess a source file
+src/memory.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/memory.c.i
+.PHONY : src/memory.c.i
+
+src/memory.s: src/memory.c.s
+.PHONY : src/memory.s
+
+# target to generate assembly for a file
+src/memory.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/turtle.dir/build.make CMakeFiles/turtle.dir/src/memory.c.s
+.PHONY : src/memory.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... turtle"
+	@echo "... src/chunk.o"
+	@echo "... src/chunk.i"
+	@echo "... src/chunk.s"
+	@echo "... src/debug.o"
+	@echo "... src/debug.i"
+	@echo "... src/debug.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/memory.o"
+	@echo "... src/memory.i"
+	@echo "... src/memory.s"
 .PHONY : help
 
 
