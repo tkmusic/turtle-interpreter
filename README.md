@@ -4,8 +4,6 @@
 
 The Turtle Interpreter is an open-source project designed to interpret and execute programs written in the Turtle programming language. This documentation provides an overview of the key components and modules of the Turtle Interpreter, along with explanations of their functionality and purpose.
 
-The Core of the Interpreter is made using the incredible book [Crafting Interpreters](https://craftinginterpreters.com) from Robert Nystrom.
-
 ## Project Structure
 
 The Turtle Interpreter project is organized into several files, each serving a specific purpose:
@@ -26,38 +24,42 @@ The Turtle Interpreter project is organized into several files, each serving a s
 
 8. **debug.h**: Header file declaring functions related to debugging. It includes prototypes for `disassembleChunk` and `disassembleInstruction`.
 
+9. **value.c**: Source file implementing functions for managing a dynamic array of `Value` types.
+
+10. **value.h**: Header file declaring functions and structures related to managing `Value` types.
+
 ## Code Chunks (`chunk.c`, `chunk.h`)
 
-The Turtle Interpreter uses code chunks to represent the bytecode of Turtle programs. A code chunk (`Chunk`) consists of an array of bytes (`code`), a count of the number of bytes used (`count`), and the capacity of the array (`capacity`). The main operations related to code chunks are:
+The Turtle Interpreter uses code chunks to represent the bytecode of Turtle programs. A code chunk (`Chunk`) consists of an array of bytes (`code`), a count of the number of bytes used (`count`), and the capacity of the array (`capacity`). Additionally, code chunks now include a `ValueArray` named `constants` to store constant values. The main operations related to code chunks are:
 
-- `void initChunk(Chunk* chunk)`: Initializes a code chunk by setting the count and capacity to zero and allocating memory for the code array.
+- `void initChunk(Chunk* chunk)`: Initializes a code chunk by setting the count and capacity to zero, allocating memory for the code array, and initializing the constants array.
 
-- `void freeChunk(Chunk* chunk)`: Frees the memory allocated for the code array within a code chunk and resets the chunk to its initial state.
+- `void freeChunk(Chunk* chunk)`: Frees the memory allocated for the code array and constants array within a code chunk and resets the chunk to its initial state.
 
 - `void writeChunk(Chunk* chunk, uint8_t byte)`: Writes a byte to the code chunk. If the capacity is exceeded, it dynamically resizes the code array to accommodate more bytes.
 
-## Memory Management (`memory.c`, `memory.h`)
-
-The memory management module provides functions for dynamic memory allocation and deallocation. Key macros include:
-
-- `GROW_CAPACITY(capacity)`: Expands the capacity of a dynamic array. If the current capacity is less than 8, it sets the new capacity to 8; otherwise, it doubles the current capacity.
-
-- `GROW_ARRAY(type, pointer, oldCount, newCount)`: Dynamically resizes an array of a specified type. It is used to resize the code array within a code chunk.
-
-- `FREE_ARRAY(type, pointer, oldCount, newCount)`: Frees the memory allocated for an array. It is used to free the memory of the code array within a code chunk.
-
-- `void* reallocate(void* pointer, size_t oldSize, size_t newSize)`: Reallocates memory for a block of memory, handling resizing and freeing.
+- `int addConstant(Chunk* chunk, Value value)`: Appends a constant value to the constants array and returns its index.
 
 ## Debugging Functionality (`debug.c`, `debug.h`)
 
-The debugging functionality has been introduced to aid developers in understanding the execution flow and bytecode representation. The following functions have been added:
+The debugging functionality has been updated to handle the new `OP_CONSTANT` instruction. The following functions have been added:
 
 - `void disassembleChunk(Chunk* chunk, const char* name)`: Prints the disassembled bytecode of a given code chunk, identified by the provided name.
 
-- `int disassembleInstruction(Chunk* chunk, int offset)`: Disassembles an individual instruction at the specified offset within a code chunk.
+- `int constantInstruction(const char* name, Chunk* chunk, int offset)`: Disassembles an `OP_CONSTANT` instruction at the specified offset within a code chunk, printing detailed information about the constant value.
+
+## Value Management (`value.c`, `value.h`)
+
+The `value.c` and `value.h` files introduce functions for managing a dynamic array of `Value` types. The `ValueArray` structure includes fields for capacity, count, and an array of values. Functions include:
+
+- `void initValueArray(ValueArray* array)`: Initializes a `ValueArray` by setting the values array to `NULL` and the capacity and count to zero.
+
+- `void writeValueArray(ValueArray* array, Value value)`: Appends a `Value` to the values array. If the capacity is exceeded, it dynamically resizes the array.
+
+- `void freeValueArray(ValueArray* array)`: Frees the memory allocated for the values array within a `ValueArray` and resets the array to its initial state.
+
+- `void printValue(Value value)`: Prints a `Value` to the console.
 
 ## Build and Execution (`main.c`)
 
-The `main.c` file serves as the entry point for the Turtle Interpreter. It now includes additional functionality to test the debugging features. Specifically, it creates a simple code chunk containing an `OP_RETURN` instruction, disassembles the chunk using `disassembleChunk`, and then frees the allocated memory.
-
-
+The `main.c` file now includes additional functionality to demonstrate the new `OP_CONSTANT` instruction and constant handling. It creates a chunk with an `OP_CONSTANT` instruction and a constant value, followed by an `OP_RETURN` instruction. The chunk is then disassembled and printed using `disassembleChunk`.
