@@ -4,18 +4,8 @@ project(Turtle C)
 # Set the C standard to C11
 set(CMAKE_C_STANDARD 11)
 
-# Source files
-set(SOURCES
-    src/main.c
-    src/chunk.c
-    src/debug.c
-    src/memory.c
-    src/memory.h
-    src/chunk.h
-    src/debug.h
-    src/common.h
-    # Add more source files as needed
-)
+# Collect all source files in the src directory
+file(GLOB SOURCES src/*.c)
 
 # Create the executable
 add_executable(turtle ${SOURCES})
